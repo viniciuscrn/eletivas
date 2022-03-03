@@ -14,7 +14,7 @@
             @csrf
             <div class="input-group mb-3">
                 <input type="text" name="registration" class="form-control form-control-lg"
-                    placeholder="Informe sua Matrícula" aria-label="Informe sua Matrícula" aria-describedby="button-addon2">
+                    placeholder="Informe aqui sua Matrícula, escolha a eletiva e clique em ENVIAR MINHA ESCOLHA" aria-label="Informe sua Matrícula" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
             </div>
         </form>

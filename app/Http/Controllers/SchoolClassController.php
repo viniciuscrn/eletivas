@@ -9,7 +9,7 @@ class SchoolClassController extends Controller
 {
     public function index()
     {
-        $schoolClasses = SchoolClass::orderBy('name')->get();
+        $schoolClasses = SchoolClass::orderBy('name','asc')->get();
         return view('schoolClass.index',compact('schoolClasses'));
     }
 

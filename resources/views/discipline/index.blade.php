@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Início</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Disciplinas Eletivas</li>
+    </ol>
+</nav>
     <!-- MENSAGEM  -->
     @if (session('mensagem'))
         <div class="alert alert-{{ session('mensagem.alert') }} border-left-{{ session('mensagem.alert') }} alert-dismissible fade show"

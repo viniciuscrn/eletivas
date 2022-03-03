@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Início</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Turmas</li>
+    </ol>
     <!-- MENSAGEM  -->
     @if (session('mensagem'))
         <div class="alert alert-{{ session('mensagem.alert') }} border-left-{{ session('mensagem.alert') }} alert-dismissible fade show"
@@ -31,8 +35,10 @@
             <tbody>
                 @foreach ($schoolClasses as $item)
                     <tr>
-                        <td>{{ $item->name }} <small class="alert-info">({{ $item->students->count() }} alunos)</small></td>
-                        <td class="text-center"><a href="{{ route('schoolClass.show', ['id' => $item->id]) }}">Detalhar</a></td>
+                        <td>{{ $item->name }} <small class="alert-info">({{ $item->students->count() }}
+                                alunos)</small></td>
+                        <td class="text-center"><a
+                                href="{{ route('schoolClass.show', ['id' => $item->id]) }}">Detalhar</a></td>
                     </tr>
                 @endforeach
             </tbody>

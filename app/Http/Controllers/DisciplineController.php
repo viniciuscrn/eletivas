@@ -34,4 +34,10 @@ class DisciplineController extends Controller
         return redirect()->route('discipline.index')
             ->with('mensagem', ['texto' => 'Disciplina eletiva adicionada com sucesso!', 'alert' => 'success']);
     }
+
+    public function show($id)
+    {
+        $discipline = Discipline::find($id);
+        return view('discipline.show', compact('discipline'));
+    }
 }
