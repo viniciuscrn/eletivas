@@ -24,7 +24,12 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">{{ $item->name }} <small class="text-muted">( {{ $item->numberVacancies }} vagas disponibilizadas.)</small></h5>
+                    <h5 class="card-title">{{ mb_strToUpper($item->name) }}</h5> 
+                    <p class="text-muted">
+                        ({{ $item->numberVacancies }} vagas disponibilizadas
+                        -
+                        {{ $item->availableVacancies() }} disponíveis)
+                    </p>
                   <p class="card-text">{{ $item->description }}</p>
                   <p class="card-text">Professor Responsável: <strong>{{ $item->teacher }}</strong></p>
                   <p>

@@ -13,4 +13,9 @@ class Student extends Model
     {
         return $this->belongsTo(SchoolClass::class);
     }
+
+    public function vote()
+    {
+        return $this->hasOne(Vote::class);
+    }
 }

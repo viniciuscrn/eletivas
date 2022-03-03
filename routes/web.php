@@ -39,6 +39,8 @@ Route::prefix('discipline')->group(function () {
 
 Route::prefix('vote')->group(function () {
     Route::post('/student', [App\Http\Controllers\StudentController::class, 'student'])->name('vote.student');
+    Route::post('/confirm', [App\Http\Controllers\StudentController::class, 'confirm'])->name('vote.confirm');
+    Route::post('/storeVote', [App\Http\Controllers\StudentController::class, 'storeVote'])->name('vote.storeVote');
 });
 
 Auth::routes();
