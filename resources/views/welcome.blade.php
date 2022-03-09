@@ -62,8 +62,8 @@
                                             </p>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="discipline"
-                                                    id="discipline{{ $cont }}" value="{{ $item->id }}" @if($item->availableVacancies() == 0) disabled @endif>
-                                                @if($item->availableVacancies() == 0)
+                                                    id="discipline{{ $cont }}" value="{{ $item->id }}" @if($item->availableVacancies() < 0) disabled @endif>
+                                                @if($item->availableVacancies() < 0)
                                                 <label class="form-check-label alert-warning"
                                                     for="discipline{{ $cont }}">
                                                     Não há mais vagas disponíveis.
