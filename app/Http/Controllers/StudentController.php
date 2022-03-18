@@ -36,15 +36,21 @@ class StudentController extends Controller
     {
         $discipline = Discipline::find($request->discipline);
         $student = Student::find($request->student);
+        $student->tel = $request->tel;
         return view('confirm', compact('student','discipline'));
     }
     
     public function storeVote(Request $request)
     {
+        $student = Student::find($request->student);
+        $student->tel = $request->tel;
+        $student->save();
         $vote = new Vote();
         $vote->discipline_id = $request->discipline;
         $vote->student_id = $request->student;
         $vote->save();
+
+        
         Session::flash('mensagem', ['texto' => 'Escolha efetuada com sucesso!', 'alert' => 'success']);
         return view('welcome');
     }

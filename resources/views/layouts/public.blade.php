@@ -25,7 +25,7 @@
     <div id="app" class="mt-3">
         <div class="container mb-3 text-center">
             <img src="/images/logo.jpeg" width="200em" class="mb-3">
-            <h2 class="text-uppercase">Processo de escolha para disciplinas eletivas 2022</h2>
+            <h2 class="text-uppercase">Processo de escolha para professores tutores 2022</h2>
             <h3 class="text-uppercase">Escola Cidadã Integral José Nominando</h3>
             <h4 class="fst-italic fw-light">"O futuro pertence àqueles que acreditam na beleza de seus sonhos".</h4>
         </div>

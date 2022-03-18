@@ -43,6 +43,7 @@
                 <tr>
                     <th>#</th>
                     <th>Nome do aluno</th>
+                    <th>Contato</th>
                     <th>Matrícula</th>
                     <th class="text-center">Ação</th>
                 </tr>
@@ -53,6 +54,7 @@
                     <tr>
                         <th>{{ $cont }}</th>
                         <td>{{ $item->name }}</td>
+                        <td>{{ $item->tel }}</td>
                         <td>{{ $item->registration }}</td>
                         <td class="text-center"><a href="#">Editar</a>
                             {{-- {{ route('student.edit', ['id' => $item->id]) }} --}}

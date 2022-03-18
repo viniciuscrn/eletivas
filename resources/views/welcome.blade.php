@@ -14,7 +14,7 @@
             @csrf
             <div class="input-group mb-3">
                 <input type="text" name="registration" class="form-control form-control-lg"
-                    placeholder="Informe aqui sua Matrícula, escolha a eletiva e clique em ENVIAR MINHA ESCOLHA" aria-label="Informe sua Matrícula" aria-describedby="button-addon2">
+                    placeholder="Informe aqui sua Matrícula, escolha o professor e clique em ENVIAR MINHA ESCOLHA" aria-label="Informe sua Matrícula" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
             </div>
         </form>
@@ -33,11 +33,12 @@
                     <p>Professor responsável: {{ $student->vote->discipline->teacher }}</p>
                 </div>
             @else
-                <h2 class="text-center mt-3">ESCOLHA A DISCIPLINA ELETIVA</h2>
+                <h2 class="text-center mt-3">ESCOLHA O PROFESSOR TUTOR</h2>
                 <hr>
                 @if (isset($disciplines))
                     <form action="{{ route('vote.confirm') }}" method="post">
                         @csrf
+                        <input type="text" name="tel" class="form-control form-control-lg mt-3 mb-3" placeholder="Antes de escolher informe um contato: (99)99999-9999" required>
                         <input type="hidden" name="student" value="{{ $student->id }}">
                         @php $cont = 1; @endphp
                         @foreach ($disciplines as $item)
@@ -61,7 +62,7 @@
                                                 <strong>{{ $item->teacher }}</strong>
                                             </p>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="discipline"
+                                                <input class="form-check-input" type="radio" name="discipline" required
                                                     id="discipline{{ $cont }}" value="{{ $item->id }}" @if($item->availableVacancies() < 0) disabled @endif>
                                                 @if($item->availableVacancies() < 0)
                                                 <label class="form-check-label alert-warning"
@@ -87,4 +88,9 @@
             @endif
         @endif
     </div>
+    <script>
+        function validaVoto(){
+            if()
+        }
+    </script>
 @endsection

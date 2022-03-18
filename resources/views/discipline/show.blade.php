@@ -24,6 +24,7 @@
             <tr>
                 <th>#</th>
                 <th>Nome</th>
+                <th>Contato</th>
                 <th>Matrícula</th>
                 <th>Turma</th>
             </tr>
@@ -34,6 +35,7 @@
                 <tr>
                     <td>{{ $cont }}</td>
                     <td>{{ $item->student->name }}</td>
+                    <td>{{ $item->student->tel }}</td>
                     <td>{{ $item->student->registration }}</td>
                     <td>{{ $item->student->schoolClass->name }}</td>
                 </tr>
